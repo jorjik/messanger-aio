@@ -1,0 +1,18 @@
+/**/
+body {background: black; color: #ddd; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
+.wr {padding: 2em 1em}
+.table {display: table; width: 100%;}
+.row {display: table-row}
+.cell {display: table-cell; text-align: center; width: 25%; padding-bottom: 18px}
+
+.cell img,
+.cell svg {
+  width: 48px;
+}
+.mailru {color: #0f0}
+.tit {margin-bottom: 4px}
+
+.down {text-align: center; line-height: 3em; border-top: 1px dotted #555; width: 90%; margin: 0 auto;}
+.co1 {color:#aaa;}
+
+.cell.v2 img {opacity: 0.8;}
