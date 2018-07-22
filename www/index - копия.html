@@ -7,8 +7,10 @@
         <title>All-in-One</title>
     		<link rel="stylesheet" href="css/style.css">
 		    <script>
-var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-ref.addEventListener('loadstart', function(event) { alert(event.url); });
+				document.addEventListener("deviceready", onDeviceReady, false);
+				function onDeviceReady() {
+				    window.open = cordova.InAppBrowser.open;
+				}
 		    </script>
 </head>
 <body>
