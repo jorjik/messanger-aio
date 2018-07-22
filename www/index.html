@@ -1,139 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-				<script type="text/javascript" src="cordova.js"></script>
-        <title>All-in-One</title>
-    		<link rel="stylesheet" href="css/style.css">
-		    <script>
-function clickExternalLink(event){
-     cordova.InAppBrowser.open(event.data.href, '_system');
-} 
- 
-function prepareHREFS(){
-     $('a').each(function(){
-     var $a = $(this);
-     var href = $a.attr('href');
-     var target = $a.attr('target');
-    
- 
-     if(target=='_system'||target=='_blank'){
-          $a.click({'href':href,'target':target},clickExternalLink); }
-          });
-}
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
 
-prepareHREFS();
-		    </script>
-</head>
-<body>
-  <div class="wr">
-	<div class="table">
-    <!-- row 1 -->
-    <div class="row">
-      <div class="cell">
-        <a href="https://m.facebook.com/messages">
-        <img
-        src="img/fb.png"  
-        ></a>  
-        <div class="tit">
-          Facebook
-        </div>
-      </div>
-      <div class="cell">
-        <a href="https://m.my.mail.ru/my/dialogues">
-        <img class="mailru"
-        src="img/mailru.png"  
-        ></a>  
-        <div class="tit">
-          Mail.ru 
-        </div>
-      </div>
-      <div class="cell">
-        <a href="https://m.vk.com/mail">
-        <img
-        src="img/vk.png"  
-        ></a>  
-        <div class="tit">
-          Vkontakte
-        </div>
-      </div>
-      <div class="cell">
-        <a href="https://web.skype.com/">
-        <img
-        src="img/skype.png"  
-        ></a>  
-        <div class="tit">
-          Skype
-        </div>
-      </div>
-    </div>
-    <!-- row 2 -->
-    <div class="row">
-      <div class="cell">
-          <a href="https://m.ok.ru/dk?st.cmd=userDlgs">
-            <img
-            src="img/ok.png"  
-          ></a>  
-          <div class="tit">
-            Ok.ru
-          </div>
-      </div>
-      <div class="cell">
-          <a href="https://www.linkedin.com/messaging/">
-            <img
-            src="img/in.png"  
-          ></a>  
-          <div class="tit">
-            LinkedIn
-          </div>
-      </div>
-      <div class="cell">
-          <a href="https://plus.google.com/">
-            <img
-            src="img/g+.png"  
-          ></a>  
-          <div class="tit">
-              G-Plus
-          </div>
-      </div>
-      <div class="cell">
-          <a href="https://web.telegram.org/#/login">
-            <img
-          src="img/telegram.png"  
-          ></a>  
-          <div class="tit">
-              Telegram 
-          </div>
-      </div>
-    </div>
-  </div>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
-  <div class="down co1">download:</div>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-  <div class="table"> 
-    <div class="row">
-        <div class="cell v2">
-            <a href="https://www.viber.com/">
-                <img
-                src="img/vi.png"  
-                ></a>  
-                <div class="tit co1">
-                    Viber
-                </div>
-        </div>
-        <div class="cell v2">
-            <a href="https://www.whatsapp.com/">
-                <img
-                src="img/wz.png"  
-                ></a>  
-                <div class="tit co1">
-                    Whatsapp
-                </div>
-        </div>
-    </div>
-  </div>
-  </div>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
 
-</body>
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
