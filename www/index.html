@@ -7,8 +7,23 @@
         <title>All-in-One</title>
     		<link rel="stylesheet" href="css/style.css">
 		    <script>
-var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-ref.addEventListener('loadstart', function(event) { alert(event.url); });
+function clickExternalLink(event){
+     cordova.InAppBrowser.open(event.data.href, '_system');
+} 
+ 
+function prepareHREFS(){
+     $('a').each(function(){
+     var $a = $(this);
+     var href = $a.attr('href');
+     var target = $a.attr('target');
+    
+ 
+     if(target=='_system'||target=='_blank'){
+          $a.click({'href':href,'target':target},clickExternalLink); }
+          });
+}
+
+prepareHREFS();
 		    </script>
 </head>
 <body>
