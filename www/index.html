@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
   <title>All-in-One</title>
   <meta charset="utf-8">
@@ -90,31 +91,30 @@
       </div>
     </div>
   </div>
+=======
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
+>>>>>>> parent of 3de987b... first commit
 
-  <div class="down co1">more download:</div>
-  <div class="table"> 
-    <div class="row">
-        <div class="cell v2">
-            <a href="https://www.viber.com/">
-                <img
-                src="img/vi.png"  
-                ></a>  
-                <div class="tit co1">
-                    Viber
-                </div>
-        </div>
-        <div class="cell v2">
-            <a href="https://www.whatsapp.com/">
-                <img
-                src="img/wz.png"  
-                ></a>  
-                <div class="tit co1">
-                    Whatsapp
-                </div>
-        </div>
-    </div>
-  </div>
-  </div>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
-</body>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
+
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
