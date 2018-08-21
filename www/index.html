@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <head>
   <title>All-in-One</title>
   <meta charset="utf-8">
@@ -23,7 +24,7 @@
     <!-- row 1 -->
     <div class="row">
       <div class="cell">
-        <a href="https://web.telegram.org/#/login" target="_blank">
+        <a onclick="cordova.InAppBrowser.open('https://web.telegram.org/#/login', target, param)">
           <img src="img/telegram.png"  
         ></a>  
         <div class="tit">
@@ -113,6 +114,28 @@
          ref.addEventListener('exit', function(event) { alert(event.type); });
     }
 
+=======
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
+
+>>>>>>> parent of 3de987b... first commit
     </script>
   </head>
   <body>
