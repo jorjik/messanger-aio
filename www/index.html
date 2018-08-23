@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <head>
   <title>All-in-One</title>
   <meta charset="utf-8">
@@ -24,7 +22,7 @@
     <!-- row 1 -->
     <div class="row">
       <div class="cell">
-        <a onclick="cordova.InAppBrowser.open('https://web.telegram.org/#/login', target, param)">
+        <a onclick="window.open('https://web.telegram.org/#/login', target, param)">
           <img src="img/telegram.png"  
         ></a>  
         <div class="tit">
@@ -32,7 +30,7 @@
         </div>
       </div>
       <div class="cell">
-        <a onclick="brw.open('https://m.my.mail.ru/my/dialogues', target, param)">
+        <a onclick="window.open('https://m.my.mail.ru/my/dialogues', target, param)">
           <img class="mailru" src="img/mailru.png"  
         ></a>  
         <div class="tit">
@@ -40,7 +38,7 @@
         </div>
       </div>
       <div class="cell">
-        <a onclick="brw.open('https://m.vk.com/mail', target, param)">
+        <a onclick="window.open('https://m.vk.com/mail', target, param)">
           <img src="img/vk.png"  
         ></a>  
         <div class="tit">
@@ -48,7 +46,7 @@
         </div>
       </div>
       <div class="cell">
-        <a onclick="brw.open('https://web.skype.com/', target, param)">
+        <a onclick="window.open('https://web.skype.com/', target, param)">
           <img src="img/skype.png"  
         ></a>  
         <div class="tit">
@@ -59,7 +57,7 @@
     <!-- row 2 -->
     <div class="row">
       <div class="cell">
-          <a onclick="brw.open('https://m.ok.ru/dk?st.cmd=userDlgs', target, param)">
+          <a onclick="window.open('https://m.ok.ru/dk?st.cmd=userDlgs', target, param)">
             <img src="img/ok.png"  
           ></a>  
           <div class="tit">
@@ -67,7 +65,7 @@
           </div>
       </div>
       <div class="cell">
-          <a onclick="brw.open('https://www.linkedin.com/messaging/', target, param)">
+          <a onclick="window.open('https://www.linkedin.com/messaging/', target, param)">
             <img src="img/in.png"  
           ></a>  
           <div class="tit">
@@ -75,7 +73,7 @@
           </div>
       </div>
       <div class="cell">
-          <a onclick="brw.open('https://plus.google.com/', target, param)">
+          <a onclick="window.open('https://plus.google.com/', target, param)">
             <img src="img/g+.png"  
           ></a>  
           <div class="tit">
@@ -83,7 +81,7 @@
           </div>
       </div>
       <div class="cell">
-        <a onclick="brw.open('https://m.facebook.com/messages', target, param)">
+        <a onclick="window.open('http://messanger.com/', target, param)">
           <img src="img/fb.png"  
         ></a>  
         <div class="tit">
@@ -92,52 +90,7 @@
       </div>
     </div>
   </div>
-=======
-  <head>
-    <title>InAppBrowser.addEventListener Example</title>
->>>>>>> parent of 3de987b... first commit
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-         var ref = window.open('http://apache.org', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-         ref.addEventListener('exit', function(event) { alert(event.type); });
-    }
-
-=======
-  <head>
-    <title>InAppBrowser.addEventListener Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-         var ref = window.open('http://apache.org', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-         ref.addEventListener('exit', function(event) { alert(event.type); });
-    }
-
->>>>>>> parent of 3de987b... first commit
-    </script>
-  </head>
-  <body>
-  </body>
+</div>
+  
+</body>
 </html>
