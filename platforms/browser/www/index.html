@@ -1,27 +1,120 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>InAppBrowser.addEventListener Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
+<head>
+  <title>All-in-One</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="cordova.js"></script>
+  <script>
+    
     document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
     function onDeviceReady() {
-         var ref = window.open('http://apache.org', '_blank', 'location=yes');
-         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
-         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
-         ref.addEventListener('exit', function(event) { alert(event.type); });
+      var brw = cordova.InAppBrowser;
+      var target = '_blank';
+      var param  = 'location=no,titlebar=yes';
     }
+  </script>
+</head>
+<body>
+  <div class="wr">
+	<div class="table">
+    <!-- row 1 -->
+    <div class="row">
+      <div class="cell">
+        <a href="https://web.telegram.org/#/login" target="_blank">
+          <img src="img/telegram.png"  
+        ></a>  
+        <div class="tit">
+            Telegram 
+        </div>
+      </div>
+      <div class="cell">
+        <a onclick="brw.open('https://m.my.mail.ru/my/dialogues', target, param)">
+          <img class="mailru" src="img/mailru.png"  
+        ></a>  
+        <div class="tit">
+          Mail.ru 
+        </div>
+      </div>
+      <div class="cell">
+        <a onclick="brw.open('https://m.vk.com/mail', target, param)">
+          <img src="img/vk.png"  
+        ></a>  
+        <div class="tit">
+          Vkontakte
+        </div>
+      </div>
+      <div class="cell">
+        <a onclick="brw.open('https://web.skype.com/', target, param)">
+          <img src="img/skype.png"  
+        ></a>  
+        <div class="tit">
+          Skype
+        </div>
+      </div>
+    </div>
+    <!-- row 2 -->
+    <div class="row">
+      <div class="cell">
+          <a onclick="brw.open('https://m.ok.ru/dk?st.cmd=userDlgs', target, param)">
+            <img src="img/ok.png"  
+          ></a>  
+          <div class="tit">
+            Ok.ru
+          </div>
+      </div>
+      <div class="cell">
+          <a onclick="brw.open('https://www.linkedin.com/messaging/', target, param)">
+            <img src="img/in.png"  
+          ></a>  
+          <div class="tit">
+            LinkedIn
+          </div>
+      </div>
+      <div class="cell">
+          <a onclick="brw.open('https://plus.google.com/', target, param)">
+            <img src="img/g+.png"  
+          ></a>  
+          <div class="tit">
+              G-Plus
+          </div>
+      </div>
+      <div class="cell">
+        <a onclick="brw.open('https://m.facebook.com/messages', target, param)">
+          <img src="img/fb.png"  
+        ></a>  
+        <div class="tit">
+          Facebook
+        </div>
+      </div>
+    </div>
+  </div>
 
-    </script>
-  </head>
-  <body>
-  </body>
+  <div class="down co1">more download:</div>
+  <div class="table"> 
+    <div class="row">
+        <div class="cell v2">
+            <a href="https://www.viber.com/">
+                <img
+                src="img/vi.png"  
+                ></a>  
+                <div class="tit co1">
+                    Viber
+                </div>
+        </div>
+        <div class="cell v2">
+            <a href="https://www.whatsapp.com/">
+                <img
+                src="img/wz.png"  
+                ></a>  
+                <div class="tit co1">
+                    Whatsapp
+                </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+</body>
 </html>
