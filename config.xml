@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.allinonemessager" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>All-in-One-Messanger</name>
+<widget id="com.allinonemessager" version="1.2.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>All-in-One-Messenger</name>
     <description>
         Multi-Messanger app.
     </description>
@@ -11,4 +11,20 @@
     <access origin="*" />
 
 	<plugin name="cordova-plugin-inappbrowser" />
+
+    <platform name="android">
+        <icon density="ldpi" src="/res/android/icon/ldpi.png" />
+        <icon density="mdpi" src="/res/android/icon/mdpi.png" />
+        <icon density="hdpi" src="/res/android/icon/hdpi.png" />
+        <icon density="xhdpi" src="/res/android/icon/xhdpi.png" />
+        <icon density="xxhdpi" src="/res/android/icon/xxhdpi.png" />
+        <icon density="xxxhdpi" src="/res/android/icon/xxxhdpi.png" />
+    </platform>
+    <platform name="windows">
+        <icon src="/res/winrt/icon/package_logo_winrt.png" target="StoreLogo" />
+        <icon src="/res/winrt/icon/app_logo_winrt.png" target="Square150x150Logo" />
+        <icon src="/res/winrt/icon/app_small_logo_winrt.png" target="Square30x30Logo" />
+        <icon src="/res/winrt/icon/app_tile_wide_logo_winrt.png" target="Wide315x150Logo" />
+        <splash height="300" src="/res/winrt/screen/app_splash_screen_winrt.png" width="620" />
+    </platform>
 </widget>
