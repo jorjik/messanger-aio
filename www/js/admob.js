@@ -5,7 +5,7 @@ if( /(android)/i.test(navigator.userAgent) ) {
   admobid = { // for Android
     banner: 'ca-app-pub-8047079142107338/4500849306',
     interstitial: 'ca-app-pub-8047079142107338/3116341792',
-    rewardvideo: '',
+    rewardvideo: ''
   };
 } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
   admobid = { // for iOS
